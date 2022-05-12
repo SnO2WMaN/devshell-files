@@ -54,5 +54,26 @@
       lib.importTOML = devshell.lib.importTOML;
       lib.mkShell = mkShell;
       overlay = devshell.overlay;
+      devshellModules = {
+        imports = [
+          ./modules/files.nix
+          ./modules/cmds.nix
+          ./modules/alias.nix
+          ./modules/json.nix
+          ./modules/text.nix
+          ./modules/toml.nix
+          ./modules/yaml.nix
+          ./modules/hcl.nix
+          ./modules/git.nix
+          ./modules/gitignore.nix
+          ./modules/spdx.nix
+          ./modules/docs.nix
+          ./modules/mdbook.nix
+          ./modules/direnv.nix
+          ./modules/services.nix
+          ./modules/services/rc-devshell.nix
+          ./modules/nim.nix
+        ];
+      };
     };
 }
